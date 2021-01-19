@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <style>
+        #botao1, #botao2, #botao3{
+            background-color: lightblue;
+            margin: 4px;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+        }
+        #botao1:hover, #botao2:hover, #botao3:hover{
+            background-color: rgb(116, 204, 233);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das mensagens</h1>
+ 
+        <div id="botao1" onclick="botao1()"> Botão 1
+
+        </div>
+        <div id="botao2" onclick="botao2()"> Botão 2
+
+        </div>
+        <div id="botao3" onclick="botao3()"> Botão 3
+
+    </div>
+    <script>
+        function botao1(){
+        var botao1 = document.getElementById('botao1')
+        alert('Você clicou no 1º botão')
+        }
+        function botao2(){
+        var botao2 = document.getElementById('botao1')
+        alert('Você clicou no 2º botão')
+        }
+        function botao3(){
+        var botao3 = document.getElementById('botao1')
+        alert('Você clicou no 3º botão')   
+        }
+
+    </script>
+</body>
+</html>
