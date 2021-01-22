@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        #inicio{
+            background-color: rgba(86, 235, 185, 0.473);
+            width: 200px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border: solid 2px rgba(77, 228, 233, 0.527);
+            border-radius: 10px;
+        }
+        #inicio:hover{
+            background-color:  rgba(55, 189, 144, 0.473);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <div id="inicio" onclick="antdep()"> Antecessor e Sucessor</div>
+
+    <script>
+        function antdep(){
+            var numero = window.prompt('Digite um numero inteiro qualquer: ')
+            numero = Number(numero)
+            var ant = numero - 1
+            var suc = numero + 1
+            alert(`Número ${numero} \nO antecessor é ${ant} e o sucessor é ${suc}.`)
+        }
+    </script>
+</body>
+</html>
