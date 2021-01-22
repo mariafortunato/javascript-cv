@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+    <style>
+        #inicio{
+            background-color: rgb(127, 255, 212);   
+            width: 200px;
+            height: 70px;
+            font-size: 20px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 10px;
+            border: solid 1px rgb(53, 145, 140);
+        }
+        #inicio:hover{
+            background-color: rgb(50, 184, 172);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o troco </h1>
+    <div id="inicio" onclick="comprar()">
+        Comprar produto
+    </div>
+
+    <script>
+        function comprar(){
+           var prod = window.prompt('Qual produto você está comprando? ')
+           var valorProd = window.prompt(`Quanto custa ${prod} que você está comprando?`)
+           var pagamento = window.prompt(`Qual foi o valor que você deu para pagar ${prod}?`)
+
+           var troco = Number(pagamento) - Number(valorProd)
+           alert(`Você comprou ${prod} que custou R$${valorProd}.\nDeu R$ ${pagamento} em dinheiro e vai receber R$ ${troco} de troco.\nVolte sempre!`)
+        }
+    </script>
+</body>
+</html>
