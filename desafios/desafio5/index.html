@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <style>
+        #inicio{
+            background-color: rgba(18, 230, 159, 0.295);
+            font-size: 20px;
+            width: 170px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+           
+        }
+        #inicio:hover{
+            background-color:  rgba(9, 240, 163, 0.473);
+            border: solid 2px rgb(14, 204, 218);
+        }
+        #res{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <div id="inicio" onclick="conversor()">Converter</div>
+    <p>Clique no botão acima para iniciar.</p>
+    <div id="res"> </div>
+
+    <script>
+        function conversor(){
+            var metros = window.prompt('Digite uma distância em metros (m)')
+            var km = Number(metros) /10 /10 /10
+            var hm = Number(metros) /10 /10
+            var dam = Number(metros) / 10
+            var dm = Number(metros) * 10
+            var cm = Number(metros) *10 *10
+            var mm = Number(metros) *10 *10 *10
+            var converte = document.querySelector('div#res')
+            converte.innerHTML = `<strong> A distância de ${metros} metros, corresponde a ...<br></strong> ${km} quilômetros (Km)<br>
+            ${hm} hectômetros (Hm) <br> ${dam} decâmetros (dam) <br> ${dm} decímetros (dm) <br> ${cm} centímetros (cm) <br> ${mm} milímetros (mm)`
+        }
+    </script>
+</body>
+</html>
