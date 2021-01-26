@@ -40,8 +40,8 @@
             var cm = Number(metros) *10 *10
             var mm = Number(metros) *10 *10 *10
             var converte = document.querySelector('div#res')
-            converte.innerHTML = `<strong> A distância de ${metros} metros, corresponde a ...<br></strong> ${km} quilômetros (Km)<br>
-            ${hm} hectômetros (Hm) <br> ${dam} decâmetros (dam) <br> ${dm} decímetros (dm) <br> ${cm} centímetros (cm) <br> ${mm} milímetros (mm)`
+            converte.innerHTML = `<strong> A distância de ${metros} metros, corresponde a ...<br></strong> ${km.toFixed(3)} quilômetros (Km)<br>
+            ${hm.toFixed(3)} hectômetros (Hm) <br> ${dam.toFixed(3)} decâmetros (dam) <br> ${dm.toFixed(3)} decímetros (dm) <br> ${cm.toFixed(3)} centímetros (cm) <br> ${mm.toFixed(3)} milímetros (mm)`
         }
     </script>
 </body>
