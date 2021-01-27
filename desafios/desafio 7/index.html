@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+    <style>
+        #inicio{
+            background-color: rgb(147, 233, 166);
+            width: 150px;
+            height: 80px;
+            font-size: 22px;
+            line-height: 80px;
+            text-align: center;
+        }
+        #inicio:hover{
+            background-color: rgb(61, 194, 90);
+            color: white;
+        }
+        #res{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        body{
+            font: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ &#10141; US$</h1>
+    <div id="inicio" onclick="conversor()"> Converter</div>
+    <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+    <script>
+       var dol = window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+       function conversor() {
+           var real = window.prompt('Quantos R$ você tem na carteira?')
+           var res = window.document.querySelector('div#res')
+           var convertido = real / dol
+           res.innerHTML = `<strong> O dólar está ${dol} na cotação de hoje.</strong><br> Você tem ${real} reais, conseguirá ${convertido.toFixed(2)} dólares.`
+       }
+    </script>
+</body>
+</html>
