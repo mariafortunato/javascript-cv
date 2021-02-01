@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 7</title>
+    <title>Desafio 9</title>
     <style>
-        #inicio{
-            background-color: rgb(226, 150, 150);
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #principal{
+            width: 40%;
+            margin: 5%;
+            border: rgb(171, 243, 162) dashed 2px;
+        }
+        #title{
+            background-color: rgb(161, 255, 200);
+            margin: 0;
+            padding: 1%;
+            text-align: center;
+        }
+        #botao{
+            background-color: rgb(137, 221, 144);
             width: 180px;
             height: 80px;
-            font-size: 22px;
+            font-size: 20px;
             line-height: 80px;
             text-align: center;
         }
-        #inicio:hover{
-            background-color: rgb(233, 86, 86);
+        #botao:hover{
+            background-color: rgb(62, 158, 87);
             color: white;
         }
         #res{
@@ -27,11 +42,24 @@
     </style>
 </head>
 <body>
-    <h1>Reajuste salarial</h1>
-    <div id="inicio" onclick="desconto()"> Reajustar salário</div>
-    <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+    <div id="principal">
+        <h1 id="title">Reajuste salarial</h1>
+        <div id="botao" onclick="reajuste()"> Reajustar salário</div>
+        <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+    </div>
     <script>
-
+        function reajuste(){
+            var funcionario = window.prompt('Qual é o nome do funcionário? ')
+            var salAntigo = window.prompt(`Qual é o salário atual de ${funcionario}?`)
+            var ajuPorc = window.prompt(`O salário de ${funcionario} vai ser reajustado em qual porcentagem?`)
+            var res = document.getElementById('res')
+            var salAtual = Number(salAntigo) + (salAntigo * ajuPorc)/100
+            var aumento =   salAtual - salAntigo
+            res.innerHTML = `<strong> ${funcionario} recebeu um aumento salarial!</strong>
+            <br> O salário era R$ ${salAntigo}.
+            <br> Com um aumento de ${ajuPorc}%, o salário vai aumentar R$ ${aumento.toFixed(2)} no próximo mês.
+            <br> E a partir daí, ${funcionario} vai passar a ganhar R$ ${salAtual.toFixed(2)}.`
+        }
     </script>
 </body>
 </html>
