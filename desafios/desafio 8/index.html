@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+    <style>
+        #inicio{
+            background-color: rgb(226, 150, 150);
+            width: 180px;
+            height: 80px;
+            font-size: 22px;
+            line-height: 80px;
+            text-align: center;
+        }
+        #inicio:hover{
+            background-color: rgb(233, 86, 86);
+            color: white;
+        }
+        #res{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        body{
+            font: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <div id="inicio" onclick="desconto()"> Desconto de 10%</div>
+    <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+    <script>
+       function desconto() {
+            var prod = window.prompt('Qual é o produto que você está comprando?')
+            var preco = window.prompt(`Quaal é o preço do(a) ${prod}?`)
+            var res = document.querySelector("div#res")
+            var  precoDesc = preco * 0.90
+            var  desc= preco - precoDesc
+            res.innerHTML = `<strong>Calculando desconto de 10% para ${prod}</strong>
+            <br> O preço original era R$ ${preco}. 
+            <br> Você acaba de ganhar R$ ${desc.toFixed(2)} de desconto (-10%) 
+            <br> No fim, você vai pagar R$ ${precoDesc.toFixed(2)} no produto ${prod}.`
+       }
+    </script>
+</body>
+</html>
