@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora do dia</title>
+</head>
+<body>
+    <header> 
+        <h1> Vamos contar </h1>
+    </header>
+    <section>
+        <div>
+            <p>Inicio: 
+                <input type="number" name="numInicio" id="numInicio">
+            </p>
+            <p>Fim: 
+                <input type="number" name="numFim" id="numFim" >
+            </p>
+            <p>Passo: 
+                <input type="number" name="numPasso" id="numPasso">
+            </p>
+        </div>
+        <input type="button" value="Contar" onclick="contar()">
+        <div id="res"></div>
+    </section>
+    <footer> 
+        <p> &copy; Maria Alice </p>
+    </footer>
+    <script src="funcao.js"></script>
+</body>
+</html>
