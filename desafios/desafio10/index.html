@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10</title>
+    <style>
+        h1{
+            color :rgb(34, 0, 187);
+            text-shadow: 2px 2px rgb(200, 173, 236);
+        }
+        #inicio{
+            background-color: rgb(159, 168, 250);
+            width: 180px;
+            height: 80px;
+            font-size: 22px;
+            line-height: 80px;
+            text-align: center;
+        }
+        #inicio:hover{
+            background-image: linear-gradient(to bottom, rgb(32, 12, 161), rgb(155, 146, 218));
+            color: white;
+        }
+        #res{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        body{
+            font: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revendo Bhaskara </h1>
+    <div id="inicio" onclick="calcular()"> Calcular</div>
+    <div id="res"><p>Considerando uma equação no formato <strong>ax² + bx + c = 0</strong>,<br> aperte o botão acima para calcular o valor de &#9651;.</p></div>
+    <script>
+        function calcular(){
+            var a = prompt('Qual é o valor de a?')
+            var a = Number(a)
+            var b = prompt('Qual é o valor de b?')
+            var b = Number(b)
+            var c = prompt('Qual é o valor de c?')
+            var c = Number(c)
+            var res = document.getElementById('res')
+            var total = b**2 - 4 * a * c 
+            res.innerHTML =`A equação atual é <strong> ${a}x² + ${b}x + ${c} = 0 </strong> <br>
+            O cálculo realizado será <strong> &#9651; = ${b}² - 4 . ${a} . ${c}</strong> <br>
+            O valor calculado foi <strong> &#9651; = ${total}</strong>`
+        }
+    </script>
+</body>
+</html>
