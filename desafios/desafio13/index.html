@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 13</title>
+    <style>
+        h1{
+            color :rgb(10, 8, 3);
+        }
+        #inicio{
+            background-color: rgb(226, 154, 255);
+            width: 180px;
+            height: 80px;
+            font-size: 22px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 5%;
+        }
+        #inicio:hover{
+            background-image: linear-gradient(to bottom, rgb(61, 0, 66), rgb(132, 1, 158));
+            color: white;
+        }
+        #res{
+            margin-top: 20px;
+            font-size: 18px;
+            padding-top: 1%;
+        }
+        body{
+            font: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    <div id="inicio" onclick="verificar()"> Entrar com as notas </div>
+    <div id="res"><p> Clique no botão acima para informar as notas do aluno.</p></div>
+    <script>
+        
+        function verificar(){
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var nota1 =window.prompt(`Primeira nota de ${nome}:`)
+            var nota2 =window.prompt(`Segunda nota de ${nome}:`)
+            var nota1 = Number(nota1)
+            var nota2 = Number(nota2)
+            var media = (nota1 + nota2) / 2
+            if(media < 3){
+                res.innerHTML = `Aluno: ${nome}. <br> Nota 1: ${nota1}. <br> Nota 2: ${nota2}. <br> Média: ${media}. <br> <mark style="color:red;"> REPROVADO</mark>`
+            } else if(media < 6 ){
+                res.innerHTML = `Aluno: ${nome}. <br>Nota 1: ${nota1}. <br> Nota 2: ${nota2}. <br> Média: ${media}. <br> <mark style="background:yellow;"> RECUPERAÇÃO</mark>`
+            } else {
+                res.innerHTML = `Aluno: ${nome}. <br>Nota 1: ${nota1}. <br> Nota 2: ${nota2}. <br> Média: ${media}. <br> <mark style="color:green;"> APROVADO</mark>`
+            }
+    }
+            
+        
+    </script>
+</body>
+</html>
